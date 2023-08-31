@@ -10,7 +10,7 @@
 //   console.log("Buzz");
 // }
 
-// Задание 2
+// // Задание 2
 
 // let inputYear = parseInt(prompt("Введите год:"));
 
@@ -22,16 +22,18 @@
 
 //Задание 3
 
-let age = prompt ("Введіть свій вік");  
+let age = Number(prompt ("Введіть свій вік"));
+
+const lastNumber = age % 10;
 
 let yearWord;
 
-if (age === 1) {
+if (lastNumber <= 1) {
   yearWord = "рік";
-} else if (age >= 2 && age <= 4) {
-  yearWord = "роки";
-} else {
+} else if (lastNumber >= 2 && lastNumber >= 4) {
   yearWord = "років";
+} else {
+  yearWord = "роки";
 }
 
 console.log(`Вам ${age} ${yearWord}`);
